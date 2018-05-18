@@ -33,6 +33,7 @@ https://tecadmin.net/step-by-step-installation-and-configuration-openldap-server
 #radius config
 http://ng-4.blogspot.com.es/2014/08/instalacion-de-freeradius-en-centos.html
 https://www.otpme.org/redmine/projects/otpme/wiki/Freeradius_Example_Configuration
+https://wiki.freeradius.org/config/Configuration-files
 
 #radius users
 https://www.ip-sa.pl/doc/dslam/maxtnt/radius/userfile.htm
@@ -42,3 +43,6 @@ https://wiki.freeradius.org/config/Users
 #radius clients
 https://linux.die.net/man/5/clients.conf
 https://freeradius.org/radiusd/man/clients.txt
+
+#radius example
+https://github.com/FreeRADIUS/freeradius-server/tree/v3.0.x/raddb
