@@ -1,0 +1,49 @@
+Configuracion router
+Crear interfaces
+interface vlan add vlan-id=710 name=deptA interface=eth3
+interface vlan add vlan-id=810 name=deptB interface=eth3
+interface vlan add vlan-id=910 name=servers interface=eth3 
+interface vlan add vlan-id=1000 name=escola interface=eth1 
+interface vlan add vlan-id=1005 name=isp interface=eth1 
+
+
+Poner ip
+ip address add address=10.27.110.1/24 interface=deptA
+ip address add address=10.28.110.1/24 interface=deptB 
+ip address add address=10.29.110.1/24 interface=servers 
+ip address add address=192.168.3.210/16 interface=escola
+ip address add address=10.30.0.210/24 interface=isp
+ip address add address=10.50.110.1/24 interface=wlan1
+
+DHCP
+/ip pool add name=deptA ranges=10.27.110.100-10.27.110.200
+/ip dhcp-server network add dns-server=8.8.8.8 gateway=10.27.110.1 netmask=24 domain=prova.com address=10.27.110.0/24
+/ip dhcp-server add address-pool=deptA interface=deptA
+
+
+
+/ip pool add name=deptB ranges=10.28.110.100-10.28.110.200
+/ip dhcp-server network add dns-server=8.8.8.8 gateway=10.28.110.1 netmask=24 domain=prova2.com address=10.28.110.0/24
+/ip dhcp-server add address-pool=deptB interface=deptB
+
+
+/ip pool add name=wlan1 ranges=10.50.110.10-10.50.110.250
+/ip dhcp-server network add dns-server=8.8.8.8 gateway=10.50.110.1 netmask=24 domain=prova3.com address=10.50.110.0/24
+/ip dhcp-server add address-pool=wlan1 interface=wlan1
+/ip dhcp-server set
+
+Gateway
+ip route add dst-address=0.0.0.0/0 gateway=192.168.0.1
+ip route add dst-address=0.0.0.0/0 gateway=10.30.0.1 distance=2
+
+Masquerade
+ip firewall nat add chain=srcnat action=masquerade out-interface=escola
+
+Firewall
+ip firewall filter add chain=forward src-address=10.27.110.0/24 dst-address=10.28.110.0/24 action=drop 
+ip firewall filter add chain=forward src-address=10.28.110.0/24 dst-address=10.27.110.0/24 action=drop
+ip firewall filter add chain=forward connection-state=established,related action=accept place-before=0
+
+
+
+

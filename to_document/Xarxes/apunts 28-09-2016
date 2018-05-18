@@ -1,0 +1,15 @@
+  578  mkdir xuletes
+  579  cd xuletes/
+  580  git init
+  581  touch intro.md
+  582  ls -l
+  584  geany intro.md 
+  585  cat intro.md 
+
+  591  git add intro.md 
+  592  git commit -am "primer commit hecho"
+  593  geany intro.md 
+  594  git commit -am "segundo commit hecho"
+  595  git log
+
+  597  git log -p

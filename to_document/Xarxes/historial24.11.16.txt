@@ -1,0 +1,100 @@
+  621  label_B=23
+  622  label_C=24
+  623  ip link set $name_from_fedora_A down
+  624  ip link set $name_from_fedora_B down
+  625  ip link set $name_from_fedora_C down
+  626  ip link set $name_from_fedora_A name usbA
+  627  ip link set $name_from_fedora_B name usbB
+  628  ip link set $name_from_fedora_C name usbC
+  629  ip link set usbA address aa:aa:aa:00:00:$label_A
+  630  ip link set usbB address aa:aa:aa:00:00:$label_B
+  631  ip link set usbC address aa:aa:aa:00:00:$label_C
+  632  ip link set usbA up
+  633  ip link set usbB up
+  634  ip link set usbC up
+  635  ip a
+  636  ip link set usbC up
+  637  ip a
+  638  ip link set enp0s29u1u6 down
+  639  ip link set enp0s29u1u6 name usbC
+  640  ip link set enp0s29u1u6 up
+  641  ip link set usbC up
+  642  ip a
+  643  ip link set usbA up
+  644  ip link set usbA down
+  645  ip link set usbB down
+  646  ip link set usbC down
+  647  ip link show
+  648  ip link set usbA up
+  649  ip link show
+  650  ip a
+  651  ip link set enp0s29u1u4 up
+  652  ip a
+  653  ip link set usbB up
+  654  ip a
+  655  ip link set enp0s29u1u5 up
+  656  ip a
+  657  ip link set usbC up
+  658  ip a
+  659  ip link set enp0s29u1u4 down
+  660  ip link set enp0s29u1u4 name usbA
+  661  ip link set enp0s29u1u5 name usbB
+  662  ip link set enp0s29u1u5 down
+  663  ip link set enp0s29u1u5 name usbB
+  664  ip link set usbC address aa:aa:aa:00:00:24
+  665  ip link set usbB address aa:aa:aa:00:00:23
+  666  ip link set usbA address aa:aa:aa:00:00:22
+  667  ip link set usbA up
+  668  ip link set usbb up
+  669  ip link set usbB up
+  670  ip link set usbC up
+  671  ip a
+  672  dhclient -r
+  673  ip a
+  674  ip a a 192.168.100.23/24 dev enp2s0
+  675  ip a d 192.168.100.23/24 dev enp2s0
+  676  ip a a 172.17.22.1/24 dev usbA
+  677  ip a a 172.17.24.1/24 dev usbC
+  678  echo 1> /proc/sys
+  679  ip a
+  680  ping 172.17.22.2
+  681  echo 1> /proc/sys/net/ipv4/ip_forward 
+  682  echo 1 > /proc/sys/net/ipv4/ip_forward 
+  683  ip a
+  684  ping 172.17.22.1
+  685  ping 172.17.22.2
+  686  watch ip a
+  687  ip a f usbA
+  688  ip a f usbC
+  689  brctl
+  690  brctl show
+  691  bretl addbr br0
+  692  brctl addbr br0
+  693  brctl addid br0 usbA
+  694  brctl addif br0 usbA
+  695  brctl showmacs br0
+  696  brctl addif br0 usbC
+  697  brctl addif br0 usbB
+  698  brctl showmacs br0
+  699  ip a
+  700  ip a a 192.168.100.23/24 dev enp2s0
+  701  ip r
+  702  brctl addif br0 enp2s0
+  703  ip a
+  704  ip link set br0 up
+  705  ip a
+  706  ip a d 192.168.100.23/24 dev enp2s0
+  707  ip a a 192.168.100.23/24 dev br0
+  708  ip a
+  709  ip link set enp0s29u1u4 down
+  710  ip link set enp0s29u1u4 name usbA
+  711  ip link set enp0s29u1u4 up
+  712  ip link set usbA up
+  713  brctl showmacs br0 
+  714  ip a
+  715  brctl addif usbA 
+  716  brctl addif br0 usbA 
+  717  ping 192.168.100.22
+  718  history
+  719  history | tail -n 100
+  720  history | tail -n 100 > historial24.11.16.txt

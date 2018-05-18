@@ -1,0 +1,26 @@
+● cups.service - CUPS Scheduler
+   Loaded: loaded (/usr/lib/systemd/system/cups.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2016-12-01 08:41:52 CET; 1h 19min ago
+     Docs: man:cupsd(8)
+ Main PID: 1480 (cupsd)
+   Status: "Scheduler is running..."
+    Tasks: 1 (limit: 512)
+   CGroup: /system.slice/cups.service
+           └─1480 /usr/sbin/cupsd -l
+
+Dec 01 08:41:51 j22.informatica.escoladeltreball.org systemd[1]: Starting CUPS Scheduler...
+Dec 01 08:41:52 j22.informatica.escoladeltreball.org systemd[1]: Started CUPS Scheduler.
+Dec 01 08:41:52 j22.informatica.escoladeltreball.org cupsd[1480]: REQUEST localhost - - "POST / HTTP/1.1" 200 367 Create-Printer-Subscriptions successful-ok
+Dec 01 09:40:12 j22.informatica.escoladeltreball.org cupsd[1480]: REQUEST localhost - - "POST / HTTP/1.1" 200 190 Renew-Subscription successful-ok
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
+ 1  gandhi-vm.informatica.escoladeltreball.org (192.168.0.5)  0.251 ms  0.223 ms  0.207 ms
+ 2  sw-l3.escoladeltreball.org (10.1.1.199)  4.778 ms  4.776 ms  5.025 ms
+ 3  10.10.1.4 (10.10.1.4)  0.325 ms  0.399 ms  0.375 ms
+ 4  115.red-80-58-67.staticip.rima-tde.net (80.58.67.115)  2.115 ms  2.111 ms  2.077 ms
+ 5  77.red-80-58-80.staticip.rima-tde.net (80.58.80.77)  13.874 ms  13.855 ms  13.825 ms
+ 6  1.red-80-58-106.staticip.rima-tde.net (80.58.106.1)  13.008 ms  11.910 ms  11.859 ms
+ 7  * * *
+ 8  72.14.219.20 (72.14.219.20)  10.236 ms  9.882 ms  10.319 ms
+ 9  72.14.234.233 (72.14.234.233)  11.370 ms  10.899 ms 72.14.232.189 (72.14.232.189)  9.616 ms
+10  216.239.47.225 (216.239.47.225)  12.791 ms 216.239.48.81 (216.239.48.81)  9.714 ms 216.239.47.227 (216.239.47.227)  10.729 ms
+11  google-public-dns-a.google.com (8.8.8.8)  10.436 ms  10.862 ms  10.763 ms
