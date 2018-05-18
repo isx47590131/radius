@@ -1,0 +1,12 @@
+#Dockerfile freeradius server
+#exemples de usuaris
+#https://www.ip-sa.pl/doc/dslam/maxtnt/radius/userfile.htm
+dnf -y update vi
+#paquets base
+dnf -y install vim nmap iputils iproute mlocate procps tree findutils passwd
+#paquets que van de la mà
+dnf -y install freeradius freeradius-utils freeradius-ldap hostname 
+
+#ldap
+dnf -y install openldap openldap-clients openldap-servers
+rm /var/run/nologin 
