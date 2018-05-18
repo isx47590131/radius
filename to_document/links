@@ -5,3 +5,22 @@ https://justanothersysadminblog.wordpress.com/2014/03/18/crear-una-ca-propia-con
 
 #Docker compose
 https://docs.docker.com/compose/compose-file/
+
+#docker network
+https://docs.docker.com/network/host/
+https://docs.docker.com/network/network-tutorial-macvlan/#prerequisites
+
+#mikrotik
+http://opentodo.net/2012/07/configuring-peap-authentication-with-freeradius/
+https://blog.svedr.in/posts/freeradius-peapv0+mschapv2-howto.html
+https://forum.mikrotik.com/viewtopic.php?t=112881
+
+#mikrotik wireless
+https://wiki.mikrotik.com/wiki/Manual:Interface/Wireless
+
+#radius eap
+http://lists.freeradius.org/pipermail/freeradius-users/2016-August/084440.html
+https://www.garron.me/en/go2linux/instantiation-failed-module-eap.html
+
+#radius - mikrotik setup
+https://wiki.mikrotik.com/wiki/How_to_setup_up_RADIUS_for_use_with_MikroTik_-_By_Ramona
