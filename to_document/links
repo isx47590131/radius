@@ -24,3 +24,21 @@ https://www.garron.me/en/go2linux/instantiation-failed-module-eap.html
 
 #radius - mikrotik setup
 https://wiki.mikrotik.com/wiki/How_to_setup_up_RADIUS_for_use_with_MikroTik_-_By_Ramona
+https://medium.com/@georgijsr/freeradius-2-1-12-ubuntu-14-04-server-with-ldap-authentication-and-ldap-fail-over-6611624ff2c9
+
+radius -ldap config
+https://tecadmin.net/freeradius-authentication-with-openldap/
+https://tecadmin.net/step-by-step-installation-and-configuration-openldap-server-and-freeradius/
+
+#radius config
+http://ng-4.blogspot.com.es/2014/08/instalacion-de-freeradius-en-centos.html
+https://www.otpme.org/redmine/projects/otpme/wiki/Freeradius_Example_Configuration
+
+#radius users
+https://www.ip-sa.pl/doc/dslam/maxtnt/radius/userfile.htm
+https://freeradius.org/radiusd/man/users.txt
+https://wiki.freeradius.org/config/Users
+
+#radius clients
+https://linux.die.net/man/5/clients.conf
+https://freeradius.org/radiusd/man/clients.txt
