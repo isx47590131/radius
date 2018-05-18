@@ -22,6 +22,9 @@ https://wiki.mikrotik.com/wiki/Manual:Interface/Wireless
 http://lists.freeradius.org/pipermail/freeradius-users/2016-August/084440.html
 https://www.garron.me/en/go2linux/instantiation-failed-module-eap.html
 
+#radius ssl
+https://paulgporter.net/2013/07/14/freeradius-ldaps/
+
 #radius - mikrotik setup
 https://wiki.mikrotik.com/wiki/How_to_setup_up_RADIUS_for_use_with_MikroTik_-_By_Ramona
 https://medium.com/@georgijsr/freeradius-2-1-12-ubuntu-14-04-server-with-ldap-authentication-and-ldap-fail-over-6611624ff2c9
