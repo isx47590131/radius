@@ -72,13 +72,13 @@ $ systemctl status radiusd
 i comprovar els ports:
 ```
 $ sudo netstat -putan | grep radiusd
-udp        0      0 127.0.0.1:18120         0.0.0.0:*                           3801/radiusd        
-udp        0      0 0.0.0.0:1812            0.0.0.0:*                           3801/radiusd        
-udp        0      0 0.0.0.0:1813            0.0.0.0:*                           3801/radiusd        
-udp        0      0 0.0.0.0:34658           0.0.0.0:*                           3801/radiusd        
-udp6       0      0 :::34440                :::*                                3801/radiusd        
-udp6       0      0 :::1812                 :::*                                3801/radiusd        
-udp6       0      0 :::1813                 :::*                                3801/radiusd  
+udp        0      0 127.0.0.1:18120         0.0.0.0:*                           3801/radiusd
+udp        0      0 0.0.0.0:1812            0.0.0.0:*                           3801/radiusd
+udp        0      0 0.0.0.0:1813            0.0.0.0:*                           3801/radiusd
+udp        0      0 0.0.0.0:34658           0.0.0.0:*                           3801/radiusd
+udp6       0      0 :::34440                :::*                                3801/radiusd
+udp6       0      0 :::1812                 :::*                                3801/radiusd
+udp6       0      0 :::1813                 :::*                                3801/radiusd
 ```
 
 
@@ -125,13 +125,6 @@ udp6       0      0 :::1813                 :::*                                
 	Framed-IP-Address = 10.0.0.1
 	Reply-Message = "Bienvenid@, pere"
    ```
-   
-  Com hem vist ens ha fet ens ha connectat perfectament com a pere
-
-
-
-
-
-
+Com hem vist ens ha fet ens ha connectat perfectament com a pere
 
 ## 2. Configuració
