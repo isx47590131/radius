@@ -15,4 +15,4 @@ Testejar que tot funciona correctament, fer les modificacions necessaries per qu
 
 ## Setmana 4
 
-Preparació per la presentació, revisar la documentació 
+Preparació per la presentació, revisar la documentació.
