@@ -1,9 +1,9 @@
-# @edt ASIX-M11 Curs 2017-2018
-# ldapserver:dataDB
-# servivor ldap creació interactiu
+# @isx47590131 projecte
+# isx47590131/radius:radiusserver
+# servivor radius mode debbug
 # --------------------------------
 FROM fedora:24
-MAINTAINER isx47590131 "@edt ASIX-M11 Curs 2017-2018"
+MAINTAINER isx47590131 "@isx47590131 projecte"
 RUN dnf -y update vi
 RUN dnf -y install vim procps iputils iproute tree nmap mlocate man-db \
         freeradius-client freeradius freeradius-ldap freeradius-utils \
