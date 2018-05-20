@@ -1,13 +1,16 @@
 # Guia bàsica per posar en marxa radius
 
-## 1. Instal·lació
+La següent explicació és únicament per aprendre com fer la instal·lació i com és el funcionament bàsic d'un servidor radius, on els usuaris estaran creats internament. Si desitges una explicació més profunda fes click [aqui.]()
+
+## Instal·lació
+
 Per començar a instal·lar *Freeradius* hem de mirar quins paquets tenim disponibles en la nostre distribució (en el meu cas fedora:24 `dnf`):
 
 ```
 $ sudo dnf list all freeradius
 Last metadata expiration check: 4 days, 0:54:33 ago on Thu Apr 19 08:18:59 2018.
 Available Packages
-freeradius.x86_64                                                             3.0.10-2.fc24                                         
+freeradius.x86_64                                                             3.0.10-2.fc24
 ```
 
 i l'instal·lem juntament amb el pequet utils:
@@ -30,7 +33,7 @@ radiusd:x:95:
 
 
 
-Ara cal comprovar que tenim els ports que toquen disponibles per ser utilitzats. Tenim dos opcions, una que és desactivar el *Firewall* i l'altre que és permetre els ports 1812, 1813, 1645 i 1646 ([suport de cisco on explica els ports](https://supportforums.cisco.com/t5/wan-routing-and-switching/which-port-numbers-are-used-for-radius-accounting-and-radius/td-p/2494536 "Suport Cisco"))
+Ara cal comprovar que tenim els ports que toquen disponibles per ser utilitzats. Tenim dos opcions, una que és desactivar el *Firewall* i l'altre que és permetre els ports 1812, 1813, 1645 i 1646 ( [suport de cisco on explica els ports](https://supportforums.cisco.com/t5/wan-routing-and-switching/which-port-numbers-are-used-for-radius-accounting-and-radius/td-p/2494536 "Suport Cisco") )
 En el meu cas ja tinc el *Firewall* desactivat:
 
 ```
@@ -82,7 +85,7 @@ udp6       0      0 :::1813                 :::*                                
 ```
 
 
-### 1.1 Creem una configuració inicial molt bàsica per saber si esta tot correcte.
+##  Creem una configuració inicial molt bàsica per saber si esta tot correcte.
   
   Mirem que el fitcher `/etc/raddb/clients.conf` que ha de tenir aquesta configuracó per defecte:
   
@@ -94,7 +97,7 @@ udp6       0      0 :::1813                 :::*                                
      nastype = other
    }
   ```
-  
+
   Ens inventem un usuari per pràcticar i l'afegim al principi del fitcher `/etc/raddb/users`: 
   
   ```
@@ -102,8 +105,10 @@ udp6       0      0 :::1813                 :::*                                
      Framed-IP-Address = 10.0.0.1,
      Reply-Message = "Bienvenid@, %{User-Name}"
   ```
-  
-  Parem el *radius* i l'encenem en mode *debug*
+
+## Posada en marxa
+
+  Parem el *radius* i l'encenem en mode *debug*, per poder observar si hi ha qualsevol problema o simplement per veure la comunicació.
   
   ```
   $ sudo systemctl stop radiusd.service
@@ -111,7 +116,7 @@ udp6       0      0 :::1813                 :::*                                
   $ sudo radiusd -X
   
   ```
-  Ara fem login per provar si podem fer *login* com a client, però des de la mateixa màquina:
+  Ara fem login per provar si podem fer *login* com a client, des de la mateixa màquina:
   ```
   $ radtest pere kpere 127.0.0.1 100 testing123
 	Sent Access-Request Id 52 from 0.0.0.0:45916 to 127.0.0.1:1812 length 74
@@ -125,6 +130,4 @@ udp6       0      0 :::1813                 :::*                                
 	Framed-IP-Address = 10.0.0.1
 	Reply-Message = "Bienvenid@, pere"
    ```
-Com hem vist ens ha fet ens ha connectat perfectament com a pere
-
-## 2. Configuració
+Com hem vist ens ha fet ens ha connectat perfectament com a pere.

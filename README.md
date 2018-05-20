@@ -34,6 +34,8 @@
 
 - Aprendre a fer una configuració bàsica de Radius.
 
-- Crear dockers, dockerfiles i docker-compose. Automatitzar les builds dels servidors.
+- Crear dockers, dockerfiles i docker-compose i automatitzar les builds dels servidors mitjançant això.
 
-- 
+- Utilitzar un servidor ldap que contingui les dades dels usuaris, perquè es puguin validar com a usuaris de radius.
+
+- Seguritzar les comunicacions en el màxim del possible.
