@@ -11,7 +11,7 @@ RUN dnf -y install vim procps iputils iproute tree nmap mlocate man-db \
 RUN mkdir /opt/docker
 RUN rm /var/run/nologin
 ADD  . /opt/docker/
-RUN chmod +x /opt/docker/startup.sh /opt/docker/get_ip.sh
+RUN chmod +x /opt/docker/startup.sh
 COPY ldap.conf /etc/openldap/
 COPY clients.conf /etc/raddb/
 COPY default /etc/raddb/sites-enabled/
