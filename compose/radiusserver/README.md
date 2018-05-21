@@ -1,10 +1,16 @@
-# FreeRadius
+# Directori FreeRadius
 
 ## Què és?
 
-## Què conté?
+RADIUS significa *Remote Authentication Dial In User Service* o *Marcatge d'autenticació al servei d'usuaris*, és un protocol de xarxa que la funció principal que té és el control d'accés a la xarxa dels usuaris mitjançant l'autenticació. Les funcions principals són:
 
-Aquest directori conté els fitxers de configuració per la posada en marxa del servidor radius en un container en mode debbug, és a dir, que en posar-lo en funcionament consumeix el terminal per transmetre la informació del que està passant.
++ Autenticar usuaris o dispositius abans de permetre l'accés a la xarxa.
++ Autoritzar a usuaris o dispositius a recursos de xarxa específics.
++ Comptes per a l'ús d'aquests recosos
+
+## Què conté el directori?
+
+Aquest directori conté els fitxers de configuració per la posada en marxa del servidor radius en un *container* en mode debbug, és a dir, que en posar-lo en funcionament consumeix el terminal per transmetre la informació del que està passant.
 
 + clients.conf
 

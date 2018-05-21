@@ -4,7 +4,7 @@
 
 + Docker-compose.yml
 
-    És el fitxer on s'indica la construcció dels containers, explicaré el significat de les directives i els valors utilitzades en el meu. Cal destacar que el sistema de diferenciar directives és la identació, és a dir, una mateixa variable pot estar declarant coses diferents segons el "nivell" d'identació  que estigui. Si necessites mes ajuda consulta [aqui.](https://docs.docker.com/compose/gettingstarted/)
+    És el fitxer on s'indica la construcció dels *containers*, explicaré el significat de les directives i els valors utilitzades en el meu. Cal destacar que el sistema de diferenciar directives és la identació, és a dir, una mateixa variable pot estar declarant coses diferents segons el "nivell" d'identació  que estigui. Si necessites mes ajuda consulta [aqui.](https://docs.docker.com/compose/gettingstarted/)
 
     | Directives    | Significat      | Valors  |
     |------------- |-------------  | ----- |
@@ -12,7 +12,7 @@
     | `services`    | Comença la declaració dels serveis  | `str` |
     | <code>ldapserver &#124; radiusserver <code> | Comença la declaració de què conté cada servei |definicions d'altres directives |
     | `build`    | Indica on es troba el *Dockerfile* o la imatge en el repositori d'imatges de *DockerHub* | És troben a un subdirectori |
-    | `container_name`    | Nom del container | `str` |
+    | `container_name`    | Nom del *container* | `str` |
     | `hostname`    | Nom que se li atorga per comunicar-se en xarxa|  `str` |
     | `ports`    | Ports que seran utilitzats en el servei | `int` |
     | `networks`    | Opcions de xarxa  | `str` o definicions d'altres directives |
