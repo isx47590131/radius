@@ -87,7 +87,7 @@ udp6       0      0 :::1813                 :::*                                
 
 ##  Creem una configuració inicial molt bàsica per saber si esta tot correcte.
   
-  Mirem que el fitcher `/etc/raddb/clients.conf` que ha de tenir aquesta configuracó per defecte:
+  Mirem que el fitxer `/etc/raddb/clients.conf` que ha de tenir aquesta configuracó per defecte:
   
   ```
   client localhost {
@@ -98,7 +98,7 @@ udp6       0      0 :::1813                 :::*                                
    }
   ```
 
-  Ens inventem un usuari per pràcticar i l'afegim al principi del fitcher `/etc/raddb/users`: 
+  Ens inventem un usuari per pràcticar i l'afegim al principi del fitxer `/etc/raddb/users`: 
   
   ```
   pere Cleartext-Password := "kpere"
