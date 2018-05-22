@@ -6,7 +6,7 @@
 
 **Descripció:** Projecte que utilitza *radius* per validar usuaris provinents d'un router *Mikrotik* contra un servidor ldap. En cada directori trobaràs un README explicant el funcionament.
 
-**Verions:** 
+**Versions:** 
 
 + docker -> 17.06
 + docker-compose -> 3.3

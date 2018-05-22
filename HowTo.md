@@ -158,6 +158,13 @@ docker-compose version 1.21.2, build a133471
 ```
 Si necessites ajuda per instal·lar la teva versió de docker consulta [aquesta documentació.](https://docs.docker.com/compose/install/)
 
+```
+$ wget https://download.docker.com/linux/fedora/24/x86_64/stable/Packages/docker-ce-17.06.0.ce-1.fc24.x86_64.rpm  
+$ sudo dnf -y install Downloads/docker-ce-17.06.0.ce-1.fc24.x86_64.rpm
+$ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+```
+
 ## 2. Configuració prèvia
 
 Hem d'assegurar-nos que tenim el `NetworkManager` parat i les IPs corresponents. Un cop parat encenem el Mikrotik i el connectem per configurar-lo. És probable que mentre fem tota la configuració perdem l'accés a internet, per això és recomanable tenir-ho tot descarregat.

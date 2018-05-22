@@ -26,7 +26,7 @@ pradtest radius radius localhost 100 testing123
 
 # Actualizar la versión de docker
 
-[isx47590131@i21 ~]$ sudo dnf remove docker \
+>[isx47590131@i21 ~]$ sudo dnf remove docker \
 >                   docker-client \
 >                   docker-client-latest \
 >                   docker-common \
