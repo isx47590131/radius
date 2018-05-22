@@ -1,6 +1,6 @@
-# Directori radiusserver
+# Directori ldapserver
 
-## Què és Radius?
+## Què és ldap?
 
 RADIUS significa *Remote Authentication Dial In User Service* o *Marcatge d'autenticació al servei d'usuaris*, és un protocol de xarxa que la funció principal que té és el control d'accés a la xarxa dels usuaris mitjançant l'autenticació. Les funcions principals són:
 

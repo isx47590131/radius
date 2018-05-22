@@ -11,7 +11,7 @@
     | `version`    | Versió de docker-compose utilitzada | `int` |
     | `services`    | Comença la declaració dels serveis  | `str` |
     | <code>ldapserver &#124; radiusserver <code> | Comença la declaració de què conté cada servei |definicions d'altres directives |
-    | `build`    | Indica on es troba el *Dockerfile* o la imatge en el repositori d'imatges de *DockerHub* | És troben a un subdirectori |
+    | `build`    | Indica on es troba el *Dockerfile*, que és el fixer per la creació del container | És troben a un subdirectori |
     | `container_name`    | Nom del *container* | `str` |
     | `hostname`    | Nom que se li atorga per comunicar-se en xarxa|  `str` |
     | `ports`    | Ports que seran utilitzats en el servei | `int` |
@@ -40,3 +40,7 @@ Amb l'ordre `docker-compose up --build` et crea els contenidors si no existeixen
 ## Quina utilitat té?
 
 En el cas que vulguis tenir diversos contenidors funcionant alhora, la millor opció que tens és utilitzar el compose, perquè et permet automatitzar la creació de les imatges, la creació dels contenidors i la posada en marxa dels mateixos.
+
+## Repositori de *DOCKERHUB*
+
+Si voleu utilitzar les imatges ja creades al repositori de DockerHub només heu de fer un `docker pull isx47590131/radius:ldapserver` per al servidor ldap o `docker pull isx47590131/radius:radiusserver` per al servidor de radius.

@@ -1,7 +1,6 @@
 # Llistat total de la organitzacio dc=edt,dc=org
-# @edt 2016
-# M06-ASO
-# -----------------------------------------------
+# @isx47590131 Projecte radius 2018
+ -----------------------------------------------
 
 dn: dc=edt,dc=org
 dc: edt
@@ -77,22 +76,6 @@ objectclass: organization
 
 
 # ---------- Usuaris ----------------------------
-dn: uid=radius,ou=usuaris,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: radius
-cn: radiusd
-sn: radius
-homephone: 555-222-2220
-mail: radius@edt.org
-description: user radius admin
-ou: Profes
-uid: radius
-uidNumber: 5055
-gidNumber: 100
-homeDirectory: /tmp/home/radius
-userPassword: testing123
-
 dn: uid=pau,ou=usuaris,dc=edt,dc=org
 objectclass: posixAccount
 objectclass: inetOrgPerson

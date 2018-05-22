@@ -1,4 +1,0 @@
-dn: olcDatabase={1}bdb,cn=config
-changetype: modify
-add: to * by dn.exact="uid=radius,ou=usuaris,dc=edt,dc=org" *	
-

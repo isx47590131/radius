@@ -12,7 +12,6 @@ RUN mkdir /opt/docker
 RUN rm /var/run/nologin
 ADD  . /opt/docker/
 RUN chmod +x /opt/docker/startup.sh
-COPY ldap.conf /etc/openldap/
 COPY clients.conf /etc/raddb/
 COPY default /etc/raddb/sites-enabled/
 COPY ldap /etc/raddb/mods-aviable/

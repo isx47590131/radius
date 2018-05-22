@@ -11,8 +11,6 @@ RUN dnf -y install vim procps iputils iproute tree nmap mlocate man-db \
 RUN mkdir -p /opt/docker/certs
 ADD . /opt/docker
 RUN rm /var/run/nologin
-#COPY  * /opt/docker/
-COPY ldap.conf /etc/openldap/
 RUN chmod +x /opt/docker/startup.sh /opt/docker/configuracio.sh
 RUN /opt/docker/configuracio.sh &> /dev/null
 WORKDIR /opt/docker 
