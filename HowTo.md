@@ -156,7 +156,7 @@ Docker version 17.06.0-ce, build 02c1d87
 $ docker-compose -version
 docker-compose version 1.21.2, build a133471
 ```
-Si necessites ajuda per instal·lar la teva versió de docker consulta [aquesta documentació.](https://docs.docker.com/compose/install/)
+Si necessites ajuda per instal·lar la teva versió de docker consulta [aquesta documentació.](https://docs.docker.com/compose/install/) Primer cal desinstal·lar la versió que tingueu i després:
 
 ```
 $ wget https://download.docker.com/linux/fedora/24/x86_64/stable/Packages/docker-ce-17.06.0.ce-1.fc24.x86_64.rpm  
@@ -175,6 +175,16 @@ $ sudo dhclient -r
 $ sudo ip a a 192.168.88.5/24 dev enp5s0 #la interfície que fem 
 #servir per configurar el mikrotik 
 ```
+
+Si necessites canviar el nom d'un adaptador de xarxa, per aixi facilitar l'administració, com n'és el meu cas et recomano que facis el que a continuació:
+
+```
+$ sudo ip link set <nom_interficie> down
+$ sudo ip link set <nom_interficie> name usbA
+$ sudo ip link set usbA address aa:aa:aa:00:00:01
+$ sudo ip link set usbA up
+```
+
 
 Un cop fet això toca configurar el router. Ens copiem la configuració donada en el fitxer `Mikrotik.conf` en el portapapers i la copiem en el Mikrotik.
 

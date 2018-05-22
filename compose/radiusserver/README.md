@@ -83,10 +83,10 @@ Aquest directori conté els fitxers de configuració per la posada en marxa del 
 + Dockerfile
 
   És l'encarregat d'ajuntar tots els fitxers del directori per formar una imatge, configurar-la i arrencar el servei.
-  
+
   | Ordre | Utilitat | 
   |-------|----------|
-  | `FROM` | Imatge original, d'un partirà la nova imatge  |
+  | `FROM` | Imatge original, d'on partirà la nova imatge  |
   |`MAINTAINER`| Descripció de l'encarregat de mantenir la imatge|
   | `RUN`| Executa ordres a dins del container |
   |`ADD` | Afegeix fitxers i directoris de local al container |

@@ -2,87 +2,38 @@
 
 ## Què és ldap?
 
-RADIUS significa *Remote Authentication Dial In User Service* o *Marcatge d'autenticació al servei d'usuaris*, és un protocol de xarxa que la funció principal que té és el control d'accés a la xarxa dels usuaris mitjançant l'autenticació. Les funcions principals són:
+LDAP significa *Lightweight Directory Access Protocol* és un protocol en l'àmbit d'aplicació que permet l'accés a un servei de directori ordenat i distribuït per a cercar diversa informació en un entorn de xarxa. LDAP també és considerat una base de dades al que poden realitzar-se consultes, com és en el meu cas, en el que només es consulten les dades dels usuaris.
 
-+ Autenticar usuaris o dispositius abans de permetre l'accés a la xarxa.
-+ Autoritzar a usuaris o dispositius a recursos de xarxa específics.
-+ Comptes per a l'ús d'aquests recosos
+LDAP no descriu ​ com​ es desen les dades i es poden fer servir diversos backends diferents, com per exemple radius.
 
 ## Què conté el directori?
 
-Aquest directori conté els fitxers de configuració per la posada en marxa del servidor radius en un *container* en mode debbug, és a dir, que en posar-lo en funcionament consumeix el terminal per transmetre la informació del que està passant.
+Aquest directori conté els fitxers de configuració per la posada en marxa del servidor ldap en un *container* en mode *detached*, és a dir, que en posar-lo en funcionament es queda funcionant en segon pla sense dependre de cap cosa.
 
-+ clients.conf
++ dataDBuid.ldif
 
-    Fitxer de configuració de radius designat a gestionar els clients del servidor radius, és a dir, qui el farà servir per autenticar usuaris. El format que s'utilitza per definir clients és el següent:
-    ```
-    client  <nom> {
-            <atribut> = <valor>
-            <atribut> = <valor>
-            ...
-    }
-    ```
-  + Possibles atributs:
+  Fitxer de configuració del ldap designat a contenir tot el que respecte als usuaris i als grups. Conté noms, contrasenyes, descripcions, correus, etc. Respecte a les contrasenyes han de ser-hi en text pla, ja que radius no té la capacitat per autenticar usuaris si estan encriptades.
 
-    | Atribut | Significat | Valor   |
-    |---|---------|---|
-    | `ipaddr` (Obligatori) | IPv4 que utilitza el client | `int`   |
-    | `netmask` | Si es vol definir un conjunt de clients d'una mateixa, xarxa cal utilitzar aquest atribut | `int`   |
-    | `secret` (Obligatori)  | Contrasenya utilitzada per la comunicació entre el client i el servidor radius | `str`   |
-    | `shortname`  | Nom que se li atorga al client per fer servir en comptes de la IP o el hostname | `str`   |
-    | `nastype` | Tipus de tecnologia utilitzada | <code> cisco &#124; computone &#124; livingston &#124; max40xx &#124; multitech &#124; netserver &#124; pathras &#124; patton &#124; portslave &#124; tc &#124; usrhiper &#124; other </code> |
-    | `require_message_authenticator` | Permet al servidor requerir un `Message-Authenticator`. Si el client està obligat a enviar-lo i no ho fa, aleshores el paquet serà silenciat.  | <code>yes &#124; no </code>   |
++ DB_CONFIG
 
-+ ldap
+  Fitxer de configuració ldap que serveix per a la construcció de la base de dades. S'afegeix al directori `/var/lib/ldap/`.
 
-  Fitxer de configuració radius, la seva funció és gestionar les connexions amb ldap mitjançant els paràmetres que s'indiquin. Cal destacar que s'ha d'instal·lar a part, amb l'ordre `sudo dnf -y install freeradius-ldap`. Un cop fet això tindrem el fitxer `ldap` al directori `/etc/raddb/sites-aviable/` i només caldrà configurar-lo segons el que necessitem i fer un enllaç simbòlic del fitxer al directori `/etc/raddb/sites-enabled/`.
++ slapd.conf 
 
-  Les parts de codi que he modificat són les següents:
+  Un altre fitxer de configuració ldap que crea la base de dades corresponent a l'organització ​“edt.org”​. S'indica quins *schemas* (que són les definicions d'objectes) seran necessaris; les rutes dels certificats, per habilitar el tràfic segur; i els usuaris de monitoratge i administració ldap.
 
-  Indico la IP que tindrà el servidor. Important si poses el *hostname* asegurar-te que esta a `/etc/hosts` del servidor radius.
++ configuracio.sh
 
-  ```
-  server = '172.100.0.2'
-  server = ldapserver
+  Aquest script serveix per configurar tot el servidor ldap, el que fa és esborrar la configuració que ve per defecte, incorpora la creada prèviament, comprova que tot estigui correcte i genera la base de dades. També canvia el propietari perquè sigui ldap i no hi hagi possibles errors.
 
-  port = 389
+ + startup.sh
 
-  identity = 'cn=Manager,dc=edt,dc=org'
-  password = jupiter
- 
-  base_dn = 'dc=edt,dc=org'
-  ```
-
-  Per introduir tls cal crear primer una CA, i despres els cetificats (la parella key-cert) signats per aquesta CA. És important que el servidor ldap també tingui el certificat de la CA.
-
-  ```
-  tls {
-    start_tls = yes
-    ca_file	= /opt/docker/certs/CAcert.pem
-    certificate_file = /opt/docker/certs/radiusservercert.pem
-    private_key_file = /opt/docker/certs/radiusserverkey.pem
-    require_cert	= 'demand'
-  ```
-
-+ default
-
-  Un altre fitxer de configuració de radius. Aquest és l'encarregat de definir el host virtual per defecte, en ell es defineix per quines IPs escolta, els ports i el tipus d'autenticació que volem. En el meu cas com vull que l'autenticació sigui ldap he descomentat les següents línies:
-
-   ```
-   -ldap
-   Auth-Type LDAP {
- 	 	ldap
- 	 }
-
-   ```  
-
-+ startup.sh
-
-  Aquest fitxer serveix per a la posada en marxa del servidor en mode debbug, però primer s'espera a poder contactar amb el servidor ldap, ja que si no pogués contactar quan s'intenti posar en marxa donaria un error i no ho faría.
+  Aquest fitxer serveix per a la posada en marxa del servidor en mode detached.
 
 + Dockerfile
 
   És l'encarregat d'ajuntar tots els fitxers del directori per formar una imatge, configurar-la i arrencar el servei.
+
   | Ordre | Utilitat | 
   |-------|----------|
   | `FROM` | Imatge original, d'un partirà la nova imatge  |

@@ -1,6 +1,6 @@
 # Llistat total de la organitzacio dc=edt,dc=org
 # @isx47590131 Projecte radius 2018
- -----------------------------------------------
+#-----------------------------------------------
 
 dn: dc=edt,dc=org
 dc: edt
@@ -348,7 +348,7 @@ uid: mao
 uidNumber: 11001
 gidNumber: 650
 homeDirectory: /tmp/home/1wiaw/mao
-userPassword: {SHA}89F9x2P5XmKafnH54qLunfQ8h0Y=
+userPassword: mao
 
 dn: uid=ho,o=asia,ou=clients,dc=edt,dc=org
 objectclass: posixAccount
@@ -363,7 +363,7 @@ uid: ho
 uidNumber: 11002
 gidNumber: 650
 homeDirectory: /tmp/home/1wiaw/ho
-userPassword: {SHA}mnaoV605m0kroBh50PotcX5EMLI=
+userPassword: ho
 
 dn: uid=hirohito,o=asia,ou=clients,dc=edt,dc=org
 objectclass: posixAccount
@@ -378,7 +378,7 @@ uid: hiro
 uidNumber: 11003
 gidNumber: 650
 homeDirectory: /tmp/home/1wiaw/hiro
-userPassword: {SHA}bylNbPKEKAirTNxHDMoNj8jHrKA=
+userPassword: hirohito
 
 dn: uid=nelson,o=africa,ou=clients,dc=edt,dc=org
 objectclass: posixAccount
@@ -394,7 +394,7 @@ uid: nelson
 uidNumber: 11004
 gidNumber: 650
 homeDirectory: /tmp/home/1wiaw/nelson
-userPassword: {SHA}2RX06XDlNlQgLBz1xi5gpygKghk=
+userPassword: nelson
 
 dn: uid=robert,o=africa,ou=clients,dc=edt,dc=org
 objectclass: posixAccount
@@ -409,7 +409,7 @@ uid: robert
 uidNumber: 11005
 gidNumber: 650
 homeDirectory: /tmp/home/1wiaw/robert
-userPassword: {SHA}EukpPsazDH+ooJJq9CgH6SnBaE8=
+userPassword: robert
 
 dn: uid=ali,o=africa,ou=clients,dc=edt,dc=org
 objectclass: posixAccount
@@ -425,7 +425,7 @@ uid: ali
 uidNumber: 11006
 gidNumber: 650
 homeDirectory: /tmp/home/1wiaw/ali
-userPassword: {SHA}tCptk9eWkVIi9v+y/91hN9k8HNs=
+userPassword: ali
 
 dn: uid=konrad,o=eu,o=europa,ou=clients,dc=edt,dc=org
 objectclass: posixAccount
@@ -440,7 +440,7 @@ uid: konrad
 uidNumber: 11007
 gidNumber: 651
 homeDirectory: /tmp/home/2wiaw/konrad
-userPassword: {SHA}v7M/0OfTWcdI9irH59W8m7FgL6k=
+userPassword: kondrad
 
 dn: uid=humphrey,o=eu,o=europa,ou=clients,dc=edt,dc=org
 objectclass: posixAccount
@@ -455,7 +455,7 @@ uid: humphrey
 uidNumber: 11008
 gidNumber: 651
 homeDirectory: /tmp/home/2wiaw/humphrey
-userPassword: {SHA}6WvUsL4qewGBxPBk0xxwZq8jSFk=
+userPassword: humphrey
 
 dn: uid=carles,o=eu,o=europa,ou=clients,dc=edt,dc=org
 objectclass: posixAccount
@@ -470,7 +470,7 @@ uid: carles
 uidNumber: 11009
 gidNumber: 651
 homeDirectory: /tmp/home/2wiaw/carles
-userPassword: {SHA}N59JHsqofesnS/uN/hTgYniAHVc=
+userPassword: carles
 
 dn: uid=francisco,o=noneu,o=europa,ou=clients,dc=edt,dc=org
 objectclass: posixAccount
@@ -486,7 +486,7 @@ uid: francisco
 uidNumber: 11010
 gidNumber: 651
 homeDirectory: /tmp/home/2wiaw/fracisco
-userPassword: {SHA}ExWuYilEQ2eWipQ6IZ843vmoES0=
+userPassword: francisco
 
 dn: uid=vladimir,o=noneu,o=europa,ou=clients,dc=edt,dc=org
 objectclass: posixAccount
@@ -501,7 +501,7 @@ uid: vladimir
 uidNumber: 11011
 gidNumber: 651
 homeDirectory: /tmp/home/2wiaw/vladimir
-userPassword: {SHA}3JGGoGB4czkVpvy6s05ZEgvitIQ=
+userPassword: vladimir
 
 dn: uid=jorge,o=noneu,o=europa,ou=clients,dc=edt,dc=org
 objectclass: posixAccount
@@ -519,7 +519,7 @@ uid: jorge
 uidNumber: 11012
 gidNumber: 651
 homeDirectory: /tmp/home/2wiaw/jorge
-userPassword: {SHA}M/knNE4HngDT+kXYgzsE5zUiPuw=
+userPassword: jorge
 
 # ---------- Grups ------------------------------
 
