@@ -111,6 +111,53 @@ Un altre avantatge és que si fas alguna modificació en els fitxers de configur
 
 ---
 
+## 5. Quin paper juga Docker?
+
+El docker compose que he creat:
+```
+version: "3.3"
+services:
+        #Build para el sevidor ldap
+        ldapserver:
+                build: ldapserver/.
+                container_name: ldapserver
+                hostname: ldapserver
+
+                ports:
+                    - "389"
+                    - "636"
+                networks:
+                    rad_net:
+                        ipv4_address: 172.100.0.2
+```
+
+---
+
+```        
+        #Build para el servidor radius
+        radiusserver:
+                build: radiusserver/.
+                container_name: radiusserver
+                hostname: radiusserver
+                privileged: true
+                ports:
+                        - "1812"
+                        - "1813"
+                        - "1645"
+                        - "1646"
+                network_mode: "host"
+
+        #Xarxa i device
+networks:
+    rad_net:
+        driver: bridge #enp5s0
+        ipam:
+            config:
+                - subnet: 172.100.0.0/16
+```
+
+---
+
 ## 6. Demostracions
 
 ### 6.1 Captures

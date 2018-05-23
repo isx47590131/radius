@@ -99,6 +99,48 @@ set use-radius=yes</code></pre>
 </section>
 <section class="slide level1">
 
+<h2 id="quin-paper-juga-docker-1">5. Quin paper juga Docker?</h2>
+<p>El docker compose que he creat:</p>
+<pre><code>version: &quot;3.3&quot;
+services:
+        #Build para el sevidor ldap
+        ldapserver:
+                build: ldapserver/.
+                container_name: ldapserver
+                hostname: ldapserver
+
+                ports:
+                    - &quot;389&quot;
+                    - &quot;636&quot;
+                networks:
+                    rad_net:
+                        ipv4_address: 172.100.0.2</code></pre>
+</section>
+<section class="slide level1">
+
+<pre><code>        #Build para el servidor radius
+        radiusserver:
+                build: radiusserver/.
+                container_name: radiusserver
+                hostname: radiusserver
+                privileged: true
+                ports:
+                        - &quot;1812&quot;
+                        - &quot;1813&quot;
+                        - &quot;1645&quot;
+                        - &quot;1646&quot;
+                network_mode: &quot;host&quot;
+
+        #Xarxa i device
+networks:
+    rad_net:
+        driver: bridge #enp5s0
+        ipam:
+            config:
+                - subnet: 172.100.0.0/16</code></pre>
+</section>
+<section class="slide level1">
+
 <h2 id="demostracions">6. Demostracions</h2>
 <h3 id="captures">6.1 Captures</h3>
 <p>Captura sense tls.</p>
