@@ -33,7 +33,7 @@
 
 <h2 id="les-tecnologies-que-he-utilitzat">1. Les tecnologies que he utilitzat</h2>
 <ul class="incremental">
-<li><p>RADIUS -&gt; És tecnologia principal del projecte, que serveix per autenticar els usuaris</p></li>
+<li><p>RADIUS -&gt; És tecnologia principal del projecte, que serveix principalment per autenticar els usuaris.</p></li>
 <li><p>LDAP -&gt; És l'encarregat de contenir totes les dades dels usuaris. Cal destacar que les contrasenyes estan en text pla.</p></li>
 <li><p>MIKROTIK -&gt; Rep les peticions dels usuaris i les envia al servidor radius. Segons la resposta que li retorna radius fa unes accions unes altres.</p></li>
 <li><p>DOCKER I DOCKER-COMPOSE -&gt; Té la funció d'automatitzar el build de les imatges i la posada en marxa dels containers.</p></li>
@@ -67,7 +67,7 @@ users</code></pre>
 <section class="slide level1">
 
 <h2 id="quin-impacte-té-ldap">3. Quin impacte té ldap?</h2>
-<p>Ldap és un protocol en l'àmbit d'aplicació que permet l'accés a un servei. Ldap també és considerat una base de dades al que poden realitzar-se consultes</p>
+<p>Ldap és un protocol en l'àmbit d'aplicació que permet l'accés a un servei. Ldap també és considerat una base de dades al que poden realitzar-se consultes.</p>
 <p>He reaprofitat la configuració feta a classe de sistemes, per així dedicar-li més temps a indagar sobre radius.</p>
 </section>
 <section class="slide level1">
@@ -89,6 +89,11 @@ set use-radius=yes</code></pre>
 
 <h2 id="quin-paper-juga-docker">5. Quin paper juga Docker?</h2>
 <p>Permet no només automatitzar tota la part de les imatges, sinó, que també t'assegures que si hi ha alguna configuració mal feta, no repercutirà en el host amfitrió.</p>
+<p>Un altre avantatge és que si fas alguna modificació en els fitxers de configuració i has de restaurar la imatge, no comença des de zero, sinó que crea una imatge intermèdia per cada pas.</p>
+<p><img src="docker.png" style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;"></p>
 </section>
 <section class="slide level1">
 
@@ -108,6 +113,7 @@ set use-radius=yes</code></pre>
 
 <h2 id="demostracions-2">6. Demostracions</h2>
 <h3 id="pràctica">6.2 Pràctica</h3>
+<p>Usuaris de prova: user01 i user08</p>
 <ul class="incremental">
 <li><p>Test del build</p></li>
 <li><p>Test ldap</p></li>
@@ -118,7 +124,11 @@ set use-radius=yes</code></pre>
 </section>
 <section class="slide level1">
 
-<h2 id="preguntes">Preguntes?</h2>
+<h2 id="conclusions">Conclusions</h2>
+</section>
+<section class="slide level1">
+
+<h2 id="alguna-petició-o-pregunta">Alguna petició o pregunta?</h2>
 <p><img src="ddubtes.jpg" style="display: block;
     margin-left: auto;
     margin-right: auto;

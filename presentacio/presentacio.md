@@ -25,7 +25,7 @@
 
 ## 1. Les tecnologies que he utilitzat
 
-+ RADIUS -> És tecnologia principal del projecte, que serveix per autenticar els usuaris
++ RADIUS -> És tecnologia principal del projecte, que serveix principalment per autenticar els usuaris.
 
 + LDAP -> És l'encarregat de contenir totes les dades dels usuaris. Cal destacar que les contrasenyes estan en text pla.
 
@@ -70,7 +70,7 @@ users
 
 ## 3. Quin impacte té ldap?
 
-Ldap és un protocol en l'àmbit d'aplicació que permet l'accés a un servei. Ldap també és considerat una base de dades al que poden realitzar-se consultes
+Ldap és un protocol en l'àmbit d'aplicació que permet l'accés a un servei. Ldap també és considerat una base de dades al que poden realitzar-se consultes.
 
 He reaprofitat la configuració feta a classe de sistemes, per així dedicar-li més temps a indagar sobre radius.
 
@@ -99,6 +99,13 @@ set use-radius=yes
 
 Permet no només automatitzar tota la part de les imatges, sinó, que també t'assegures que si hi ha alguna configuració mal feta, no repercutirà en el host amfitrió.
 
+Un altre avantatge és que si fas alguna modificació en els fitxers de configuració i has de restaurar la imatge, no comença des de zero, sinó que crea una imatge intermèdia per cada pas.
+
+<img src="docker.png" style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;">
+
 ---
 
 ## 6. Demostracions
@@ -126,6 +133,8 @@ Captura amb tls.
 
 ### 6.2 Pràctica
 
+Usuaris de prova: user01 i user08
+
 + Test del build
 
 + Test ldap
@@ -140,9 +149,13 @@ Captura amb tls.
 
 ## Conclusions
 
++ La idea d'utilitzar radius per autenticar dispositius és atractiva, però és molt laboriosa i la documentació és escassa i poc descriptiva.
+
++ Crec que és més interessant dur a terme aquest projecte en un entorn laboral, que no pas en un entorn amb usuaris públics (com pot ser un restaurant o un centre comercial) a causa de la complicitat que comporta.
+
 ---
 
-## Preguntes?
+## Alguna petició o pregunta?
 
 <img src="ddubtes.jpg" style="display: block;
     margin-left: auto;
