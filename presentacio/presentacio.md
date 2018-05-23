@@ -43,7 +43,7 @@ Les sigles signifiquen *Remote Authentication Dial In User Service* i és un pro
 
 Els ports que utilitza són el 1812 per autenticar i autoritzar i el 1813 per al maneig de comptes d'usuari. Utilitza sistemes d'autenticació externs com pot ser ldap, sql, kerberos, etc. tot hi que s'hi poden configurar usuaris en el propi servidor. 
 
-Què conté el directori quan instal·les radius?
+Quins son els fitxers més importants quan instal·les radius?
 
 ```
 certs
@@ -51,12 +51,10 @@ clients.conf
 dictionary
 mods-available
 mods-enabled
-proxy.conf
 radiusd.conf
 README.rst
 sites-available
 sites-enabled
-templates.conf
 users
 ```
 
