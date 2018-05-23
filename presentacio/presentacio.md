@@ -25,7 +25,7 @@
 
 ## 1. Les tecnologies que he utilitzat
 
-+ RADIUS -> És tecnologia principal del projecte, que serveix principalment per autenticar els usuaris.
++ RADIUS -> És tecnologia principal del projecte, que serveix principalment per autenticar i autoritzar els usuaris i a més garantir l'accés restringit a xarxes sense fil.
 
 + LDAP -> És l'encarregat de contenir totes les dades dels usuaris. Cal destacar que les contrasenyes estan en text pla.
 
@@ -39,9 +39,9 @@
 
 ## 2. Què és RADIUS?
 
-Les sigles signifiquen *Remote Authentication Dial In User Service*, i és un protocol de xarxa que té com a funció principal controlar l'accés a un recurs de xarxa mitjançant autenticacions.
+Les sigles signifiquen *Remote Authentication Dial In User Service* i és un protocol de xarxa que té com a funció principal controlar l'accés a un recurs de xarxa mitjançant autenticacions. 
 
-Els ports que utilitza són el 1812 per autenticar i autoritzar i el 1813 per al maneig de comptes d'usuari.
+Els ports que utilitza són el 1812 per autenticar i autoritzar i el 1813 per al maneig de comptes d'usuari. Utilitza sistemes d'autenticació externs com pot ser ldap, sql, kerberos, etc. tot hi que s'hi poden configurar usuaris en el propi servidor. 
 
 Què conté el directori quan instal·les radius?
 

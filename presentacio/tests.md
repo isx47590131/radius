@@ -34,6 +34,10 @@ user08 user08
 
 radiusd.conf -> fitxer de configuració. conte configuració basica l a qual en la majoria de casos n ocal tocar. com per exemple la quantitat de request que li poden arribar o els includes de moduls.
 
+que és autenticar -> és el fet de demostrar que algu és qui diu ser.
+
+que és autoritzar -> és el procés de decidir si aquesta persona té permis per accedir al servei.
+
 User Datagram Protocol (UDP) és un protocol del nivell de transport
 
  | Atribut | Significat | Valor   |
