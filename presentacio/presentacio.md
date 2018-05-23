@@ -74,6 +74,10 @@ Ldap és un protocol en l'àmbit d'aplicació que permet l'accés a un servei. L
 
 He reaprofitat la configuració feta a classe de sistemes, per així dedicar-li més temps a indagar sobre radius.
 
+<img src="ldap.png" style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;">
 ---
 
 ## 4. Com configurar Mikrotik?
