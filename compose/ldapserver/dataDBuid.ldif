@@ -298,7 +298,7 @@ uid: user08
 uidNumber: 7008
 gidNumber: 611
 homeDirectory: /tmp/home/2asix/user08
-userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
+userPassword: {SHA}c1RhDROvTYU9groTgYEsJEy3QuI=
 
 dn: uid=user09,ou=usuaris,dc=edt,dc=org
 objectclass: posixAccount

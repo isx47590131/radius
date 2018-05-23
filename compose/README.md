@@ -4,7 +4,7 @@
 
 + Docker-compose.yml
 
-    És el fitxer on s'indica la construcció dels *containers*, explicaré el significat de les directives i els valors utilitzades en el meu. Cal destacar que el sistema de diferenciar directives és la identació, és a dir, una mateixa variable pot estar declarant coses diferents segons el "nivell" d'identació  que estigui. Si necessites mes ajuda consulta [aqui.](https://docs.docker.com/compose/gettingstarted/)
+    És el fitxer on s'indica la construcció dels *containers*, explicaré el significat de les directives i els valors utilitzats en el meu. Cal destacar que el sistema de diferenciar directives és la identació, és a dir, una mateixa variable pot estar declarant coses diferents segons el "nivell" d'identació  que estigui. Si necessites mes ajuda consulta [aqui.](https://docs.docker.com/compose/gettingstarted/)
 
     | Directives    | Significat      | Valors  |
     |------------- |-------------  | ----- |

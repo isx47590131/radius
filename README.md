@@ -24,7 +24,7 @@
 
 - Ldap -> el servidor ldap és on es contenen les dades dels usuaris creats (uid, gid, passwd, etc.)
 
-- Mikrotik -> s'encarrega de rebre les peticions dels clients i les envia al servidor radius. Retorna la resposta al client, i en cas que sigui `Access-Accept` li atorga una IP connexió a internet.
+- Mikrotik -> s'encarrega de rebre les peticions dels clients i les envia al servidor radius. Retorna la resposta al client, i en cas que sigui `Access-Accept` li atorga una IP i connexió a internet.
 
 - Docker -> la seva funció en el meu projecte és automatitzar la construcció  i posada en marxa dels servidors radius i ldap. També serveix per aïllar-los de l'exterior i diferenciar-los tant entre ells com de l'ordinador amfitrió.
 
