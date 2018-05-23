@@ -78,7 +78,7 @@ He reaprofitat la configuració feta a classe de sistemes, per així dedicar-li 
 
 ## 4. Com configurar Mikrotik?
 
-A l'hora de configurar Mikrotik em va resultar una tasca complicada, perquè no hi havia gaire informació de com fer que és comuniques amb el servidor de radius. Al final vaig trobar les directives que corresponien.
+A l'hora de configurar Mikrotik em va resultar una tasca complicada, perquè no hi havia gaire informació de com fer que és comuniques amb el servidor de radius. Finalment vaig trobar les directives clau per completar ña configuració:
 
 ```
 /interface wireless security-profiles
