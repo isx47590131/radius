@@ -138,6 +138,10 @@ Captura amb tls.
 
 ---
 
+## Conclusions
+
+---
+
 ## Preguntes?
 
 <img src="ddubtes.jpg" style="display: block;
