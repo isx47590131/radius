@@ -60,6 +60,21 @@ users</code></pre>
 <section class="slide level1">
 
 <h2 id="què-és-radius-1">2. Què és RADIUS?</h2>
+<p>Aquesta és una entrada d'un client del fitxer <code>clients.conf</code>.</p>
+<pre><code>client mikrotik {
+        ipaddr = 192.168.88.0
+        netmask = 24
+        secret = testing123
+        shortname = mikrotik         
+        require_message_authenticator = no
+        nas_type = other
+}</code></pre>
+<p>nas_types: <code> cisco | computone | livingston | max40xx | multitech |</p>
+<p>netserver | pathras | patton | portslave | tc | usrhiper | other </code></p>
+</section>
+<section class="slide level1">
+
+<h2 id="què-és-radius-2">2. Què és RADIUS?</h2>
 <p><img src="server_radius.jpg"></p>
 </section>
 <section class="slide level1">

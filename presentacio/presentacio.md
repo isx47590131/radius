@@ -62,6 +62,29 @@ users
 
 ## 2. Què és RADIUS?
 
+Aquesta és una entrada d'un client del fitxer `clients.conf`. 
+
+```
+client mikrotik {
+        ipaddr = 192.168.88.0
+        netmask = 24
+        secret = testing123
+        shortname = mikrotik         
+        require_message_authenticator = no
+        nas_type = other
+}
+```
+
+nas_types: <code> cisco &#124; computone &#124; livingston &#124; max40xx &#124; multitech &#124; 
+
+netserver &#124; pathras &#124; patton &#124; 
+portslave &#124; 
+tc &#124; usrhiper &#124; other </code> 
+
+---
+
+## 2. Què és RADIUS?
+
 <img src="server_radius.jpg">
 
 ---
