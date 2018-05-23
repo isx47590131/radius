@@ -41,7 +41,7 @@
 
 Les sigles signifiquen *Remote Authentication Dial In User Service* i és un protocol de xarxa que té com a funció principal controlar l'accés a un recurs de xarxa mitjançant autenticacions. 
 
-Els ports que utilitza són el 1812 per autenticar i autoritzar i el 1813 per al maneig de comptes d'usuari. Utilitza sistemes d'autenticació externs com pot ser ldap, sql, kerberos, etc. tot hi que s'hi poden configurar usuaris en el propi servidor. 
+Utilitza sistemes d'autenticació externs com pot ser ldap, sql, kerberos, etc. tot hi que s'hi poden configurar usuaris en el propi servidor. Els ports que utilitza són el 1812 per autenticar i autoritzar i el 1813 per al maneig de comptes d'usuari. 
 
 Quins son els fitxers més importants quan instal·les radius?
 
@@ -91,7 +91,7 @@ tc &#124; usrhiper &#124; other </code>
 
 ## 3. Quin impacte té ldap?
 
-Ldap és un protocol en l'àmbit d'aplicació que permet l'accés a un servei. Ldap també és considerat una base de dades al que poden realitzar-se consultes.
+Ldap és un protocol en l'àmbit d'aplicació que permet l'accés a un servei. Ldap també és considerat una base de dades a la qual poder realitzar consultes.
 
 He reaprofitat la configuració feta a classe de sistemes, per així dedicar-li més temps a indagar sobre radius.
 
@@ -187,7 +187,10 @@ networks:
 
 Captura sense tls.
 
-<img src="captura-no-tls.png">
+<img src="captura-no-tls.png" style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;">
 
 
 ---
@@ -198,7 +201,10 @@ Captura sense tls.
 
 Captura amb tls.
 
-<img src="captura-tls.png">
+<img src="captura-tls.png" style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;">
 
 ---
 

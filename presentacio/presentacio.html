@@ -44,7 +44,7 @@
 
 <h2 id="què-és-radius">2. Què és RADIUS?</h2>
 <p>Les sigles signifiquen <em>Remote Authentication Dial In User Service</em> i és un protocol de xarxa que té com a funció principal controlar l'accés a un recurs de xarxa mitjançant autenticacions.</p>
-<p>Els ports que utilitza són el 1812 per autenticar i autoritzar i el 1813 per al maneig de comptes d'usuari. Utilitza sistemes d'autenticació externs com pot ser ldap, sql, kerberos, etc. tot hi que s'hi poden configurar usuaris en el propi servidor.</p>
+<p>Utilitza sistemes d'autenticació externs com pot ser ldap, sql, kerberos, etc. tot hi que s'hi poden configurar usuaris en el propi servidor. Els ports que utilitza són el 1812 per autenticar i autoritzar i el 1813 per al maneig de comptes d'usuari.</p>
 <p>Quins son els fitxers més importants quan instal·les radius?</p>
 <pre><code>certs
 clients.conf
@@ -80,7 +80,7 @@ users</code></pre>
 <section class="slide level1">
 
 <h2 id="quin-impacte-té-ldap">3. Quin impacte té ldap?</h2>
-<p>Ldap és un protocol en l'àmbit d'aplicació que permet l'accés a un servei. Ldap també és considerat una base de dades al que poden realitzar-se consultes.</p>
+<p>Ldap és un protocol en l'àmbit d'aplicació que permet l'accés a un servei. Ldap també és considerat una base de dades a la qual poder realitzar consultes.</p>
 <p>He reaprofitat la configuració feta a classe de sistemes, per així dedicar-li més temps a indagar sobre radius.</p>
 <p><img src="ldap.png" style="display: block;
     margin-left: auto;
@@ -159,14 +159,20 @@ networks:
 <h2 id="demostracions">6. Demostracions</h2>
 <h3 id="captures">6.1 Captures</h3>
 <p>Captura sense tls.</p>
-<p><img src="captura-no-tls.png"></p>
+<p><img src="captura-no-tls.png" style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;"></p>
 </section>
 <section class="slide level1">
 
 <h2 id="demostracions-1">6. Demostracions</h2>
 <h3 id="captures-1">6.1 Captures</h3>
 <p>Captura amb tls.</p>
-<p><img src="captura-tls.png"></p>
+<p><img src="captura-tls.png" style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;"></p>
 </section>
 <section class="slide level1">
 
