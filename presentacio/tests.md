@@ -14,7 +14,7 @@ ldapwhoami -x -h 172.100.0.2 -D "uid=user08,ou=usuaris,dc=edt,dc=org" -w user08
 
 radtest user01 user01 localhost 1812 testing123
 
-radtest user08 user08 172.100.0.1 1812 testing123
+radtest user08 user08 localhost 1812 testing123
 
 ## radius remot
 
